@@ -20,7 +20,7 @@ let User;
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
       
-        let db1 = mongoose.createConnection("mongodb://ac-zx7gktv-shard-00-01.hiyoai1.mongodb.net:27017/CarmelAssignment6%3A27017?directConnection=true&appName=mongosh+1.6.1");
+        let db1 = mongoose.createConnection("mongodb+srv://senecaweb322.hiyoai1.mongodb.net/myFirstDatabase");
      
         db1.on('error', (err)=>{
             reject(err); 
