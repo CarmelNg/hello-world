@@ -4,7 +4,7 @@
   "name": "cc",
   "version": "1.0.0",
   "description": "",
-  "main": "web322-app/server.js",
+  "main": "server.js",
   "start": "node server.js",
   "scripts": {
     "test": "echo \"Error\" && exit 1"
