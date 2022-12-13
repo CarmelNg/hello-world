@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "client-sessions": "^0.8.0",
+    "mongoose": "^6.8.0",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.8"
+  }
+}
