@@ -4,7 +4,7 @@
   "name": "web322-app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "web322-app/server.js",
   "scripts": {
     "test": "echo \"Error\" && exit 1"
   },
