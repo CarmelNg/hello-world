@@ -5,11 +5,11 @@
         {{#if successMessage}}
             <div class="alert alert-success"> 
                 <strong>Success:</strong>{{successMessage}}
-                
+                {{!-- Showing Success message if the user was registered successfully --}}
             </div>
 
             <a class="btn btn-success pull-right" href="/login">&nbsp;&nbsp;&nbsp;
-            
+            {{!-- After Registering moving to Log in --}}
             Proceed to Login
             &nbsp;&nbsp;&nbsp;</a>
             <br /><br /><br />
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                     
-                   
+                    {{!-- User Enter Password --}}
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-               
+                    {{!-- User enters password matching above --}}
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 
-               
+                {{!-- User enters email --}}
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
