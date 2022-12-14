@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarmelNg/hello-world.git"
+    "url": "git+https://github.com/CarmelNg/Assignment6_Carmel.git"
   },
   "author": "CarmelNguelebek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CarmelNg/hello-world/issues"
+    "url": "https://github.com/CarmelNg/Assignment6_Carmel/issues"
   },
-  "homepage": "https://github.com/CarmelNg/hello-world#readme",
+  "homepage": "https://github.com/CarmelNg/Assignment6_Carmel#readme",
   "dependencies": {
     "client-sessions": "^0.8.0",
     "cloudinary": "^1.32.0",
