@@ -23,6 +23,7 @@ const app = express();
 
 const HTTP_PORT = process.env.PORT || 8080;
 
+
 cloudinary.config({
     cloud_name: 'Cloud Name',
     api_key: 'API Key',
@@ -30,7 +31,11 @@ cloudinary.config({
     secure: true
 });
 
+<<<<<<< HEAD
 const upload = multer();
+=======
+const upload = multer(); 
+>>>>>>> df930279e9ae5b012ddb8544d65cd297829a52cf
 
 app.engine(".hbs", exphbs.engine({
     extname: ".hbs",
