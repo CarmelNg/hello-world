@@ -25,12 +25,14 @@ var app = express();
 
 var HTTP_PORT = process.env.PORT || 8080;
 
+
 cloudinary.config({
-    cloud_name: 'carmelapp',
-    api_key: '113571496754721',
-    api_secret: 'VBMlLHnNTAtRsDbaNZ__ehaORR0',
+    cloud_name: 'Cloud Name',
+    api_key: 'API Key',
+    api_secret: 'API Secret',
     secure: true
 });
+
 const upload = multer(); 
 
 app.engine(".hbs", exphbs.engine({
