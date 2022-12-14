@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CarmelNg/Assignment6_Carmel.git"
-  },
+
   "author": "CarmelNguelebek",
   "license": "ISC",
   "dependencies": {
