@@ -20,7 +20,7 @@ let User; // to be defined on new connection (see initialize)
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
         //let pass1 = encodeURIComponent("process.env.#KaranMan1");     //not working
-        let db1 = mongoose.createConnection("mongodb+srv://Amitoj:%23KaranMan1@senecaweb.kjs2lm1.mongodb.net/?retryWrites=true&w=majority");
+        let db1 = mongoose.createConnection("mongodb://ac-zx7gktv-shard-00-01.hiyoai1.mongodb.net:27017/CarmelAssignment6%3A27017?directConnection=true&appName=mongosh+1.6.1");
         // %23 in above means #. Putting only # will cause error
         db1.on('error', (err)=>{
             reject(err); // reject the promise with the provided error
