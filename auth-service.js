@@ -2,7 +2,7 @@ const { rejects } = require('assert');
 const mongoose = require('mongoose');
 const { resolve } = require('path');
 var Schema = mongoose.Schema;
-var userSchema = new Schema({           // creating user schema with userName, password, email, and loginHistory as members
+var userSchema = new Schema({           
     "userName": {
         type : String,
         unique : true
@@ -15,15 +15,15 @@ var userSchema = new Schema({           // creating user schema with userName, p
     }]
   });
 
-let User; // to be defined on new connection (see initialize)
+let User; 
 
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
-        //let pass1 = encodeURIComponent("process.env.#KaranMan1");     //not working
+      
         let db1 = mongoose.createConnection("mongodb+srv://Carmel:1234carmel@senecaweb322.hiyoai1.mongodb.net/?retryWrites=true&w=majority");
-        // %23 in above means #. Putting only # will cause error
+     
         db1.on('error', (err)=>{
-            reject(err); // reject the promise with the provided error
+            reject(err); 
         });
         db1.once('open', ()=>{
            User = db1.model("users", userSchema);
@@ -33,25 +33,25 @@ module.exports.initialize = function () {
 };
 
 
+
 module.exports.registerUser = function (userData) {
     return new Promise(function (resolve, reject) {
 
-        if(userData.password != userData.password2)     //password and confirm password doesnt match
+        if(userData.password != userData.password2)     
         {
             reject("Passwords do not match");
         }
-        else        //passwords match
+        else        
         {
             let newUser = new User(userData);
             newUser.save().then(() => {
-                // everything good
                 resolve();
               }).catch(err => {
-                if(err.code == 11000)       //check if user name is already taken 
+                if(err.code == 11000)       
                 {
                     reject("User Name already taken");
                 }
-                else                        //any other type of error
+                else                        
                 {
                     reject("There was an error creating the user: " + err);
                 }
@@ -63,16 +63,15 @@ module.exports.registerUser = function (userData) {
 
 module.exports.checkUser = function (userData) {
     return new Promise(function (resolve, reject) {
-        User.find({ userName: userData.userName })          // trying to find a user with username as provide by userData
+        User.find({ userName: userData.userName })          
         .exec()
         .then((users) => {
-            if(users[0].password != userData.password)      // if entered password doesnt match
+            if(users[0].password != userData.password)     
             {
                 reject("Incorrect Password for user: " + userData.userName)
             }
-            else if(users[0].password == userData.password)     // else if entered password was correct
+            else if(users[0].password == userData.password)     
             {
-                //recording history in loginHistory by using push method
                 users[0].loginHistory.push({dateTime: (new Date()).toString(), userAgent: userData.userAgent});
 
                 User.updateOne({userName : users[0].userName}, {$set : {loginHistory : users[0].loginHistory}})
