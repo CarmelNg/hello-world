@@ -20,7 +20,7 @@ let User;
 module.exports.initialize = function () {
     return new Promise(function (resolve, reject) {
       
-        let db1 = mongoose.createConnection("mongodb+srv://senecaweb322.hiyoai1.mongodb.net/myFirstDatabase");
+        let db1 = mongoose.createConnection("mongodb+srv://Carmel:1234carmel@senecaweb322.hiyoai1.mongodb.net/?retryWrites=true&w=majority");
      
         db1.on('error', (err)=>{
             reject(err); 
