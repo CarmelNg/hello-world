@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "\"echo \\\"Error: no test\\\" && exit 1\"",
+    "test": "echo \"Error: no test\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -13,10 +13,6 @@
   },
   "author": "CarmelNguelebek",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CarmelNg/Assignment6_Carmel/issues"
-  },
-  "homepage": "https://github.com/CarmelNg/Assignment6_Carmel#readme",
   "dependencies": {
     "client-sessions": "^0.8.0",
     "cloudinary": "^1.32.0",
