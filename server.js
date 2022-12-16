@@ -18,7 +18,7 @@ const cloudinary = require('cloudinary').v2
 const streamifier = require('streamifier')
 const exphbs = require("express-handlebars");
 const stripJs = require('strip-js');
-const authData = require('./web322-app/auth-service');
+const authData = require('./auth-service');
 const clientSessions = require('client-sessions');
 
 var app = express();
